@@ -1,0 +1,39 @@
+{
+    "name": "nblkmal/custom-auth",
+    "description": "Package for user authentication",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nblkmal",
+            "email": "nblkmal@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nblkmal\\CustomAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nblkmal\\CustomAuth\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nblkmal\\CustomAuth\\Providers\\CustomAuthServiceProvider"
+            ]
+        }
+    }
+}
