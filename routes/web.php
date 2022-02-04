@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Nblkmal\CustomAuth\Classes\CustomRegister;
+// use Nblkmal\CustomAuth
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+
+    $test = new CustomRegister();
+    dd($test->test());
+    // return $test->json();
+});
+
+

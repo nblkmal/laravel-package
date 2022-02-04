@@ -10,6 +10,11 @@ class CustomRegister
     public static $customValidationRules;
     public static $customRegisterView;
 
+    public function test()
+    {
+        return 'test success';
+    }
+
     public static function customValidationRules(array $rules)
     {
         static::$customValidationRules = $rules;
@@ -38,6 +43,7 @@ class CustomRegister
 
     public function createNewUser($request)
     {
+        dd($request);
         $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
